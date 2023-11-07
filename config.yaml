@@ -11,9 +11,6 @@ dynamicRedirects:
   - from: /grey/*
     to: /gray/:splat
     status: 200
-  - from: /grey/*
-    to: /grey2/:splat
-    status: 200
   # This is a custom redirect because the status code is 3xx.
 staticRedirects:
   - from: /grey-redirect
@@ -27,4 +24,5 @@ authentication:
   policyName: auth-policy2
   includePaths:
     - /red # red is locked down
-
+  excludePaths:
+    - /red
