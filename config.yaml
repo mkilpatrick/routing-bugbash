@@ -8,12 +8,12 @@ buildConfiguration:
       - .npmrc
 dynamicRedirects:
   # This is a rewrite because the status code is 200. It also takes advantage of built-in splat support.
-  # - from: /grey/*
-  #   to: /gray/:splat
-  #   status: 200
+  - from: /grey/*
+    to: /gray/:splat
+    status: 200
   - from: /grey/*
     to: /grey/:splat
-    status: 308
+    status: 201
   # This is a custom redirect because the status code is 3xx.
 staticRedirects:
   - from: /grey-redirect
