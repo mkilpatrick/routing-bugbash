@@ -13,7 +13,7 @@ const OverrideTemplate = (props: any) => {
   }
 
   console.log("YEXT_AUTH:", (window as any)?.YEXT_AUTH);
-  const email = (window as any)?.YEXT_AUTH?.email || "UNKNOWN!"
+  const email = (window as any)?.YEXT_AUTH?.visitor?.email || "UNKNOWN!"
 
   return template.default({
     children: <div>{`You email is ${email}`}</div>
